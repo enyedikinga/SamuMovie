@@ -33,8 +33,11 @@
 SamuLife::SamuLife ( int w, int h, QWidget *parent ) : QMainWindow ( parent )
 {
   setWindowTitle ( "SamuMovie" );
+  w = 160;
+  h = 90;
   setFixedSize ( QSize ( 2*w*m_cw, h*m_ch ) );
 
+  //gameOfLife = new GameOfLife ( w, h );
   gameOfLife = new GameOfLife ( w, h );
   gameOfLife->start();
 
